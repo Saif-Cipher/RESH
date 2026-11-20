@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-BD">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d3c3e9">
+  <meta name="description" content="Explore the RESH Bangladesh fragrance collection and build a four-scent discovery set.">
+  <title>RESH Bangladesh — Find your fragrance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header">
+    <a class="wordmark" href="#top" aria-label="RESH Bangladesh home">RESH<span>BANGLADESH</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main">
+      <a href="#top" aria-current="location">Fragrances</a>
+      <a href="#notes">Scent notes</a>
+      <a href="#collection" data-filter-link="all">Shop</a>
+      <a href="#discovery">Discovery set</a>
+      <button class="mobile-finder" data-open="finder">Scent Finder</button>
+    </nav>
+    <div class="header-actions">
+      <button class="finder-trigger" data-open="finder">Scent Finder</button>
+      <button class="bag-trigger" data-open="bag">Bag <span id="bag-count">0</span></button>
+    </div>
+  </header>
+  <main id="main">
+    <section id="top" class="hero" aria-label="Explore the fragrance lineup">
+      <div class="hero-wash" aria-hidden="true"></div>
+      <div class="hero-ring" aria-hidden="true"></div>
+      <div class="shell hero-inner">
+        <div class="hero-overline"><span>EXTRAIT DE PARFUM</span><span>BANGLADESH</span></div>
+        <div id="lineup" role="region" aria-roledescription="carousel" aria-label="Fragrance lineup" aria-keyshortcuts="ArrowLeft ArrowRight">
+          <div id="hero-model" class="model-anchor" aria-hidden="true"></div>
+          <div id="lineup-pickers"></div>
+        </div>
+        <div class="hero-controls" aria-label="Carousel controls">
+          <div class="scent-title"><span class="eyebrow" id="hero-family">RESH ORIGINALS</span><h1 id="hero-scent" aria-live="polite">Pahari</h1></div>
+          <div class="switcher">
+            <button class="round" id="prev" aria-label="Previous fragrance">←</button>
+            <button class="round" id="next" aria-label="Next fragrance">→</button>
+          </div>
+          <div class="hero-play"><span id="hero-index">01 / 06</span><button id="autoplay" aria-label="Auto-play" aria-pressed="false">Auto-play</button></div>
+        </div>
+        <div class="hero-bottom">
+          <a href="#notes">↓ Explore the notes</a>
+          <button id="rotate" aria-label="Rotate the featured bottle">⤾ Rotate bottle</button>
+          <a href="#discovery">Build your 4 × 6 ml set ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="notes" class="notes" aria-labelledby="notes-heading">
+      <div class="notes-frame">
+        <div class="shell notes-layout">
+          <div class="notes-copy">
+            <p class="eyebrow" id="notes-heading">Inside the fragrance <span id="notes-scent">· Pahari</span></p>
+            <h2 id="note-title">Fresh air</h2>
+            <p id="note-description">An airy opening inspired by green hills after the rain.</p>
+            <div class="note-specimen">
+              <a id="note-photo" hidden><img alt="" width="105" height="70"><span></span></a>
+            </div>
+          </div>
+          <div id="notes-model" class="model-anchor" aria-hidden="true"><span id="note-index">01</span><div id="notes-fallback"></div></div>
+          <div class="note-tabs" aria-label="Scent layers">
+            <button aria-pressed="true" data-note="0"><span>01</span> Opening</button>
+            <button aria-pressed="false" data-note="1"><span>02</span> Heart</button>
+            <button aria-pressed="false" data-note="2"><span>03</span> Drydown</button>
+          </div>
+          <a href="#collection" class="notes-skip">Skip to collection ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="collection" class="collection" aria-labelledby="collection-title">
+      <div class="shell">
+        <div class="section-head"><h2 id="collection-title">The<br>collection.</h2><div><p>From cool and airy to deep and warm. Find the fragrance you want to wear.</p><button class="quiet-link" data-open="finder">Find my scent ↗</button></div></div>
+        <div class="filters" aria-label="Filter fragrances"><button data-filter="all" aria-pressed="true">All scents</button><button data-filter="originals" aria-pressed="false">Resh Originals</button><button data-filter="fresh" aria-pressed="false">Fresh</button><button data-filter="oud" aria-pressed="false">Oud</button><button data-filter="warm" aria-pressed="false">Warm</button></div>
+        <div id="product-grid" class="product-grid"></div>
+      </div>
+    </section>
+
+    <section id="discovery" class="discovery" aria-labelledby="discovery-title">
+      <div class="shell discovery-inner">
+        <div class="discovery-copy">
+          <p class="eyebrow">4 × 6 ml · ৳1,000</p>
+          <h2 id="discovery-title">Make it<br>your four.</h2>
+          <p>Pick four scents and wear each one before choosing a signature bottle.</p>
+          <div id="discovery-picker" aria-label="Choose up to four fragrances"></div>
+          <div class="discovery-actions"><button class="button primary" data-add disabled>Add set to bag · ৳1,000</button><span id="inline-count" aria-live="polite">0 / 4 selected</span></div>
+        </div>
+        <div class="discovery-art" aria-label="Your selected scents"><div class="discovery-case"><div class="case-brand">RESH<span>DISCOVERY SET</span></div><div id="discovery-vials"></div></div></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="shell footer-inner"><a class="wordmark" href="#top" aria-label="RESH Bangladesh home">RESH<span>BANGLADESH</span></a><p>Extrait de parfum · Bangladesh</p><a href="https://reshbangladesh.com/shop/">Visit the live store ↗</a></div></footer>
+  <dialog id="drawer" aria-labelledby="drawer-title"><div class="drawer-head"><h2 id="drawer-title"></h2><button id="close" aria-label="Close panel">×</button></div><div id="drawer-content"></div></dialog>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
